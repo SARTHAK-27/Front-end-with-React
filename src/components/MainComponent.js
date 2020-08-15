@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Home from './HomeComponent';
 import Menu from './MenuComponent.js';
 import Contact from './ContactComponent';
+import About from "./AboutComponent";
 import DishDetailcomponent from './DishDetailComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
@@ -49,6 +50,7 @@ const DishWithId = ({match}) => {
             <Route path="/home" component={HomePage}></Route>
             <Route exact path="/menu" component={() => <Menu dishes={this.state.dishes} />}></Route>
             <Route path="/menu/:dishId" component={DishWithId}></Route>
+            <Route exact path="/aboutus" component={() => <About leaders={this.state.leaders} />}></Route>
             <Route exact path="/contactus" component={Contact}></Route>
             <Redirect to="/home"></Redirect>
         </Switch>
