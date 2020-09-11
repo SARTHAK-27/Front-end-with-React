@@ -62,3 +62,4 @@ const DishWithId = ({match}) => {
 
 
 export default Main;
+
